@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anna Maria Basangeac - Portfolio</title>
+    <meta name="description" content="Portfolio di Anna Maria Basangeac, junior web developer con esperienza in HTML, CSS, JavaScript e PHP.">
+    <link rel="stylesheet" href="stileHomePage.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">Anna Maria</div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Chi sono</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contatti</a></li>
+      </ul>
+    </nav>
+
+    <section id="home">
+      <div class="content">
+        <h1>Anna Maria Basangeac</h1>
+        <p>Junior Web Developer | Portfolio</p>
+      </div>
+    </section>
+
+    <section id="about" data-aos="fade-up">
+      <h2>Chi sono</h2>
+      <p>
+        Ciao! Mi chiamo Anna e vengo dalla Toscana, in provincia di Pisa. La mia
+        passione per la programmazione e il mondo digitale è nata presto e si è
+        consolidata con il diploma in Sistemi Informativi Aziendali all'ITCG
+        Fermi di Pontedera. <br /><br />
+        Durante uno stage presso La
+        <a href="https://www.basenet.it" target="_blank"> Base S.p.A. </a>, ho
+        avuto l'opportunità di collaborare sia con sistemisti che con
+        programmatori, esperienza che ha rafforzato il mio interesse per lo
+        sviluppo web. Attualmente mi sto preparando per iniziare un percorso ITS
+        presso
+        <a href="https://www.itstechtalentfactory.it" target="_blank">
+        ITS Tech Talent Factory</a>, focalizzato sullo sviluppo Fullstack e le tecnologie cloud.
+        <br /><br />
+        Mi piace affrontare nuove sfide e creare soluzioni innovative per il
+        web: è lì che trovo la mia vera ispirazione.
+      </p>
+    </section>
+
+    <section id="portfolio">
+        <h2 data-aos="fade-up">I miei progetti</h2>
+        <div class="projects">
+      
+          <!-- Progetto 1: Sito Stage -->
+          <div class="project-card" data-aos="fade-up">
+            <h3>Sito Web Stage - BASE S.p.A.</h3>
+            <p>
+              Come parte del mio stage presso <a href="https://www.basenet.it" target="_blank">BASE S.p.A.</a>, ho sviluppato in una settimana un sito web personale per esercitarmi con le basi del front-end.  
+              Questo progetto mi ha aiutato a comprendere la struttura delle pagine web, i fondamenti di HTML, CSS e JavaScript, e a lavorare in autonomia con il supporto del team.
+            </p>
+            <a href="https://basangeac.altervista.org/Lavori/lavoroStage/HomePage.html" target="_blank">Vedi il progetto</a>
+          </div>
+      
+          <!-- Progetto 2: Calcolatrice PHP -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Calcolatrice PHP</h3>
+            <p>
+              Questo progetto è stato realizzato durante un'esercitazione scolastica. Volevo testare l'integrazione tra HTML e PHP creando una semplice calcolatrice.  
+              È stato il mio primo approccio con il backend e la gestione dei dati lato server.
+            </p>
+            <a href="http://basangeac.altervista.org/Lavori/Web/Calcolatrice/paginaCalcolatrice.html" target="_blank">Provalo online</a>
+          </div>
+      
+          <!-- Progetto 3: Portfolio personale -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Questo Portfolio</h3>
+            <p>
+              Anche questo sito rappresenta un progetto importante: l'ho creato per presentarmi come web developer, raccontare il mio percorso e mostrare le mie competenze.
+              Ho curato design, struttura e responsività, sperimentando anche con animazioni.
+            </p>
+            <a href="#">Lo stai già esplorando! </a>
+          </div>
+      
+        </div>
+      </section>
+
+      <section id="freelance">
+        <h2>Lavoriamo insieme</h2>
+        <p>
+          Sei interessato a collaborare con me su un progetto? <br>
+          Mi trovi anche su <strong>Upwork</strong>, dove offro servizi di sviluppo web.
+        </p>
+        <a href="https://www.upwork.com/freelancers/~013c89b6eefaa7023a?mp_source=share" 
+           target="_blank" class="upwork-button">Visita il mio profilo Upwork</a>
+      </section>
+      
+      
+      <footer id="contact">
+        <h2>Contattami</h2>
+        <div class="contact-icons">
+          <a href="mailto:basangeacannamaria@gmail.com" target="_blank" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.instagram.com/anxhl_/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/anna-maria-basangeac-239032316/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.upwork.com/freelancers/~013c89b6eefaa7023a?mp_source=share" target="_blank" aria-label="Upwork">
+            <i class="fab fa-upwork"></i>
+          </a>
+        </div>
+      </footer>
+      
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+  </body>
+</html>

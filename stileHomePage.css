@@ -1,0 +1,342 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Moderno e pulito */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+  background-color: #333;
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aggiunta leggera ombra */
+}
+
+.logo {
+  color: white;
+  font-size: 22px; /* Piccolo aumento per la leggibilità */
+  font-weight: bold;
+  letter-spacing: 1px; /* Più spazio tra le lettere */
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+#nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+#nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+#nav-links li:hover {
+  background-color: #8b3ad1; /* Colore leggermente più chiaro */
+  border-radius: 5px;
+  transform: scale(1.05); /* Leggera espansione al passaggio del mouse */
+}
+
+#nav-links li:hover a {
+  color: white;
+}
+
+/* Home Section */
+#home {
+  background: url("assets/img/090-Anna18-2024.jpg") no-repeat center top 30% / cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(102, 51, 153, 0.6);
+  z-index: 1;
+}
+
+#home .content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Animazione del titolo e del paragrafo della sezione Home */
+#home h1, #home p {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+#home h1 {
+  animation-delay: 0.2s;
+  font-size: 64px;
+  margin-bottom: 20px;
+  letter-spacing: 2px; /* Aumento della spaziatura per effetto stiloso */
+}
+
+#home p {
+  animation-delay: 0.5s;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+/* Keyframes per l'animazione di fade-in e movimento verso l'alto */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#home a:hover {
+  background-color: #8b3ad1;
+  transition: background-color 0.3s ease;
+}
+
+/* General Section Styling */
+section {
+  padding: 60px 20px;
+  margin: auto;
+  width: 100%;
+  scroll-margin-top: 80px;
+}
+
+section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* About Section */
+#about,
+#portfolio {
+  background: white;
+  margin: 50px auto 0 auto;
+  padding: 40px 20px;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Ombra più morbida */
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555; /* Colore un po' più chiaro per il testo */
+}
+
+/* Portfolio Section */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Ombra più accentuata per le card */
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  color: #a64dff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+  color: #8b3ad1;
+}
+
+/* Freelance Section */
+#freelance {
+  padding: 60px 20px;
+  text-align: center;
+  margin: 80px auto;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+#freelance h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#freelance p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}A
+
+.upwork-button {
+  background-color: #a64dff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.upwork-button:hover {
+  background-color: #8b3ad1;
+}
+
+/* Contact Section */
+footer {
+  background-color: #222;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #a64dff;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #8b3ad1;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact-icons a {
+  font-size: 30px;
+  color: #a64dff;
+  background: #fff;
+  padding: 15px;
+  width: 50px;  /* Larghezza */
+  height: 50px;  /* Altezza */
+  border-radius: 50%;  /* Questo rende l'elemento rotondo */
+  display: flex;
+  justify-content: center;  /* Allinea il testo (o le icone) al centro */
+  align-items: center;  /* Allinea verticalmente il contenuto */
+  box-shadow: 0 5px 15px rgba(163, 79, 79, 0.1);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+
+.contact-icons a:hover {
+  transform: scale(1.1);
+  background-color: #a64dff;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  #nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
+
+  #nav-links li {
+    margin: 10px 0;
+  }
+
+  #home h1 {
+    font-size: 42px;
+  }
+
+  #home p {
+    font-size: 18px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    padding: 20px 15px;
+  }
+
+  .contact-icons a {
+    font-size: 24px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #home h1 {
+    font-size: 36px;
+  }
+
+  #home p {
+    font-size: 16px;
+  }
+}
